@@ -1,0 +1,78 @@
+<html>
+<head>
+<script>
+function validateForm() {
+	
+  //var x = document.getElementById
+  if (localStorage) {
+    localStorage.setItem("Name",fg);
+	document.write("HI"+localStorage.getItem("Name"));
+	
+  }
+}
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+input[type=text], input[type=password] {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 10%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+</style>
+<form action="Home.html">
+<center>
+<img src="img1.png" width="20%">
+	<br><br><br><br><br><br>
+  <div class="container" >
+    <label for="uname" ><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" id="uname">
+<br>
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required><br>
+<br><label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label
+   
+  </div>
+
+  <div class="container" >
+   <button onclick="myfunction()">Login</button>
+   
+    <button type="button" class="cancelbtn">Cancel</button><br>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+	
+  </div>
+  </center>
+</form>
+<div id="result"/></div>
+<script>
+function myfunction(){
+var name=document.getElementById("uname");
+if(typeof(Storage)!=="undefined"){
+localStorage.setItem("uname",name.value);
+}
+else
+{
+document.getElementById("result").innerHTML="Sorry!!!!";
+
+}
+</html>
